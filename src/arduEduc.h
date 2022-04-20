@@ -1,12 +1,12 @@
-#ifndef LED_H
-#define LED_H
+#ifndef ARDUEDUC_H
+#define ARDUEDUC_H
 
 #include <Arduino.h>
 
-class Led
+class arduEduc
 {
 public:
-    Saida(int pin);
+    arduEduc(int pin);
     void liga();
     void desliga();
     void inverte();
