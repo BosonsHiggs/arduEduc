@@ -6,19 +6,17 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Wire	KEYWORD1
+arduEduc	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin	KEYWORD2
-setClock	KEYWORD2
-beginTransmission	KEYWORD2
-endTransmission	KEYWORD2
-requestFrom	KEYWORD2
-onReceive	KEYWORD2
-onRequest	KEYWORD2
+ligar         KEYWORD2
+desligar      KEYWORD2
+inverter      KEYWORD2
+esperar       KEYWORD2
+blocoExecutar KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

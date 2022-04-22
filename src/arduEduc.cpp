@@ -1,22 +1,43 @@
 #include "arduEduc.h"
 
-Led::Led(int pin)
+arduEduc::arduEduc(byte pinArray_[], int lenPin_, bool pinStateIn_, int serial_speed=9600)
 {
-   pinMode(pin, OUTPUT);
-   pino = pin;
+   pinArray = pinArray_;
+   lenPin = lenPin_;
+
+   Serial.begin(serial_speed);
+   for (int n = 0; n < lenPin_; n++)
+   {
+      pinMode(*(pinArray + n), pinStateIn_);
+   }
 }
  
-void Saida::liga()
+void arduEduc::ligar()
 {
-   digitalWrite(pino,HIGH);
+   digitalWrite(3, HIGH);
 }
  
-void Saida::desliga()
+void arduEduc::desligar()
 {
-   digitalWrite(pino,LOW);
+   digitalWrite(3, LOW);
 }
  
-void Saida::inverte()
+void arduEduc::inverter()
 {
-   digitalWrite(pino, !digitalRead(pino));
+   digitalWrite(myPin, !digitalRead(myPin));
+}
+
+void arduEduc::esperar(unsigned long tempo)
+{
+   delay(tempo);
+}
+
+void arduEduc::blocoExecutar(int pinState_[], int Delay)
+{
+   pinState = pinState_;
+   for (int n = 0; n < lenPin; n++)
+   {
+      digitalWrite(*(pinArray + n), *(pinState + n));
+   }
+   delay(Delay);
 }
