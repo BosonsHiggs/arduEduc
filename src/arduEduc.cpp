@@ -14,17 +14,17 @@ arduEduc::arduEduc(byte pinArray_[], int lenPin_, bool pinStateIn_, int serial_s
  
 void arduEduc::ligar()
 {
-   digitalWrite(3, HIGH);
+   digitalWrite(*pinArray, HIGH);
 }
  
 void arduEduc::desligar()
 {
-   digitalWrite(3, LOW);
+   digitalWrite(*pinArray, LOW);
 }
  
 void arduEduc::inverter()
 {
-   digitalWrite(myPin, !digitalRead(myPin));
+   digitalWrite(*pinArray, !digitalRead(*pinArray));
 }
 
 void arduEduc::esperar(unsigned long tempo)
