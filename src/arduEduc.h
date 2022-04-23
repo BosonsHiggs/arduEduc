@@ -6,19 +6,22 @@
 class arduEduc
 {
 private:
-    int myPin;
     byte* pinArray;
     int *pinState;
     int lenPin;
+    byte* onePin;
 
 public:
-    int *Pin; //byte array
-    arduEduc(byte Pin_[], int lenPin, bool pinStateIn_, int serial_speed=9600);
+    int* myVal;
+    arduEduc(byte Pin_[]={}, int lenPin_=1);
     void ligar();
     void desligar();
     void inverter();
     void esperar(unsigned long tempo);
     void blocoExecutar(int pinState_[], int Delay);
+    bool lerDigital();
+    int* lerAnalogico();
+    void escreverAnalogico(int val);
 };
 
 #endif

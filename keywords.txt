@@ -17,6 +17,8 @@ desligar      KEYWORD2
 inverter      KEYWORD2
 esperar       KEYWORD2
 blocoExecutar KEYWORD2
+lerDigital    KEYWORD2
+lerAnalogico  KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
