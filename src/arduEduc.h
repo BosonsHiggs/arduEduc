@@ -13,6 +13,7 @@ private:
 
 public:
     int* myVal;
+    long* myValUltra;
     arduEduc(byte Pin_[]={}, int lenPin_=1);
     void ligar();
     void desligar();
@@ -22,6 +23,7 @@ public:
     bool lerDigital();
     int* lerAnalogico();
     void escreverAnalogico(int val);
+    long* distanciaUltra();
 };
 
 #endif

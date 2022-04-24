@@ -54,6 +54,37 @@ int* arduEduc::lerAnalogico()
    }
 }
 
+long* arduEduc::distanciaUltra()
+{
+   long pins[lenPin];
+   if(lenPin > 1 && lenPin < 3)
+   {
+      delayMicroseconds(5);
+      digitalWrite(*(pinArray+1), HIGH);
+      delayMicroseconds(10);
+      digitalWrite(*(pinArray+1), LOW);
+
+      pins[0] = long(pulseIn(*pinArray, HIGH)/58);
+
+      myValUltra = pins;
+      return myValUltra;
+   }
+   else if (lenPin > 2 && lenPin%2 == 0)
+   {
+      for (int n = 0; n < lenPin; n++)
+      {
+         delayMicroseconds(5);
+         digitalWrite(*(pinArray+1), HIGH);
+         delayMicroseconds(10);
+         digitalWrite(*(pinArray+1), LOW);
+
+         pins[n] = long(pulseIn(*pinArray, HIGH)/58);    
+      }
+      myValUltra = pins;
+      return myValUltra;
+   }
+}
+
 //Ler valores analógicos
 void arduEduc::escreverAnalogico(int val)
 {

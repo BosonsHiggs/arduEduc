@@ -2,7 +2,7 @@
 
 byte Led[] = {4}; //Número do pino
 
-// Instancia um objeto chamado LED no pino 4
+// Instancia um objeto chamado Arduino no pino 4
 arduEduc Arduino(Led);
 
 void setup(){

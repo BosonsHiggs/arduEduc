@@ -1,7 +1,8 @@
 /*
-Program: Array de LEDs
-Autor: Francisco Iago Lira Passos
-E-mail: iagolirapassos@gmail.com
+  Program: Array de LEDs
+  Author: Francisco Iago Lira Passos
+  Function: Automatização de estados de pinos
+  E-mail: iagolirapassos@gmail.com
 */
 
 #include <arduEduc.h>
@@ -13,8 +14,8 @@ byte Leds[] = {3, 4, 5, 6, 7}; //Número dos pinos
 
 /*
 TODO:
-Os blocos de comandos executam tarefas automáticas
-ligando ou desligando os leds
+Os blocos de comandos executam tarefas automáticas ligando ou desligando os leds.
+Você pode inserir quantos blocos forem necessários!
 */
 int blocoComandos[4][5] = {
                             {HIGH, HIGH, HIGH, HIGH, HIGH}, //Bloco de estados 1
