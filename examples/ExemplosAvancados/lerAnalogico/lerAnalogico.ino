@@ -5,7 +5,7 @@
 #include <arduEduc.h>
 
 //Placa ARduino Mega
-byte Pinos[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; //Pino analógico A0 e A1
+byte Pinos[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; //Pino analógico de A0 a A10
 const int lenPinos = sizeof(Pinos)/sizeof(Pinos[0]); //Quantidade de pinos
 
 int* myPointer;                  //Novo ponteiro

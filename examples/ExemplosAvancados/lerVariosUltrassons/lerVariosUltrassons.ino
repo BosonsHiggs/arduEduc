@@ -16,20 +16,20 @@ arduEduc Arduino(Pinos, lenPinos);
 
 void setup(){
   Serial.begin(9600);
-  for(int n=0; n < lenPinos/2; n++) pinMode(Pinos[n], OUTPUT); //trigPin como saída
+  for(int n=1; n <= lenPinos; n+=2) pinMode(Pinos[n], OUTPUT); //trigPin como saída
 }
 
 void loop()
 {
     distancia =  Arduino.distanciaUltra();
-    analogVal[0] = *distancia;
+    analogVal[cont] = *(distancia + cont);
 
     myString = "ultra[";
     myString+=cont;
-    myString+="]  = "
+    myString+="]  = ";
     myString+=analogVal[cont];
 
     Serial.println(myString);
 
-    Arduino.esperar(60);  //Esperar 60ms
+    cont = (cont==(lenPinos/2 - 1)) ? 0 : cont+1;
 }
