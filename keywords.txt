@@ -12,13 +12,15 @@ arduEduc	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-ligar         KEYWORD2
-desligar      KEYWORD2
-inverter      KEYWORD2
-esperar       KEYWORD2
-blocoExecutar KEYWORD2
-lerDigital    KEYWORD2
-lerAnalogico  KEYWORD2
+ligar             KEYWORD2
+desligar          KEYWORD2
+inverter          KEYWORD2
+esperar           KEYWORD2
+blocoExecutar     KEYWORD2
+lerDigital        KEYWORD2
+lerAnalogico      KEYWORD2
+escreverAnalogico KEYWORD2
+distanciaUltra    KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
