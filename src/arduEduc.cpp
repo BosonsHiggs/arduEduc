@@ -1,27 +1,32 @@
 #include "arduEduc.h"
 
+//Init da biblioteca
 arduEduc::arduEduc(byte pinArray_[]={}, int lenPin_=1)
 {
    pinArray = pinArray_;
    lenPin = lenPin_;
 }
- 
+
+//Enviar estado HIGH para o pino
 void arduEduc::ligar()
 {
    Serial.println(*pinArray);
    digitalWrite(*pinArray, HIGH);
 }
- 
+
+//Enviar estado low para o pino 
 void arduEduc::desligar()
 {
    digitalWrite(*pinArray, LOW);
 }
- 
+
+//Inverter estado de um pino 
 void arduEduc::inverter()
 {
    digitalWrite(*pinArray, !digitalRead(*pinArray));
 }
 
+//Delay
 void arduEduc::esperar(unsigned long tempo)
 {
    delay(tempo);
@@ -54,6 +59,7 @@ int* arduEduc::lerAnalogico()
    }
 }
 
+//Medir distancia com sensor ultrassônico SR04
 long* arduEduc::distanciaUltra()
 {
    long pins[lenPin];
@@ -92,6 +98,8 @@ void arduEduc::escreverAnalogico(int val)
    analogWrite(*pinArray, *val_);
 }
 
+
+//Executar um bloco de comandos
 void arduEduc::blocoExecutar(int pinState_[]={0}, int Delay=500)
 {
    pinState = pinState_;
@@ -108,4 +116,10 @@ void arduEduc::blocoExecutar(int pinState_[]={0}, int Delay=500)
       }
       delay(Delay);
    }
+}
+
+//função de mapeamento
+long arduEduc::mapear(long x, long in_min, long in_max, long out_min, long out_max) 
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }

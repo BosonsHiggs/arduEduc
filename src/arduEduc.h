@@ -24,6 +24,7 @@ public:
     int* lerAnalogico();
     void escreverAnalogico(int val);
     long* distanciaUltra();
+    long mapear(int value, int xmin, int xmax, int ymin, int ymax);
 };
 
 #endif
