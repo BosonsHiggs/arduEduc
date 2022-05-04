@@ -13,8 +13,9 @@ Baixe o arquivo no diretório das bibliotecas da IDE do Arduino ou execute, no d
 Uso
 ====
 
-Uso básico::
+Uso básico:
 
+```c++
      #include <arduEduc.h>
 
      byte Led[] = {4}; //Número do pino
@@ -34,6 +35,7 @@ Uso básico::
           Arduino.desligar();   //Desligar o Led
           Arduino.esperar(800); //esperar 800 ms
      }
+```
 
 Contatos
 =========
