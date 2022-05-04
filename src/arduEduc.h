@@ -24,7 +24,13 @@ public:
     int* lerAnalogico();
     void escreverAnalogico(int val);
     long* distanciaUltra();
-    float mapear(int value, int xmin, int xmax, int ymin, int ymax);
+    float mapear(long value, long xmin, long xmax, long ymin, long ymax);
+    void imprimir(String text);
+    void imprimir(int value);
+    void imprimir(float value);
+    void imprimir(bool value);
+    void imprimir(long value);
+    void imprimir(unsigned long value);
 };
 
 #endif

@@ -121,5 +121,35 @@ void arduEduc::blocoExecutar(int pinState_[]={0}, int Delay=500)
 //função de mapeamento
 float arduEduc::mapear(long x, long in_min, long in_max, long out_min, long out_max) 
 {
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  return ((float)(x) - (float)(in_min)) * ((float)(out_max) - (float)(out_min)) / ((float)(in_max) - (float)(in_min)) + (float)(out_min);
+}
+
+void arduEduc::imprimir(String value)
+{
+   Serial.println(value);
+}
+
+void arduEduc::imprimir(int value)
+{
+   Serial.println(value);
+}
+
+void arduEduc::imprimir(float value)
+{
+   Serial.println(value);
+}
+
+void arduEduc::imprimir(bool value)
+{
+   Serial.println(value);
+}
+
+void arduEduc::imprimir(long value)
+{
+   Serial.println(value);
+}
+
+void arduEduc::imprimir(unsigned long value)
+{
+   Serial.println(value);
 }

@@ -21,6 +21,8 @@ lerDigital        KEYWORD2
 lerAnalogico      KEYWORD2
 escreverAnalogico KEYWORD2
 distanciaUltra    KEYWORD2
+mapear            KEYWORD2
+imprimir          KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
