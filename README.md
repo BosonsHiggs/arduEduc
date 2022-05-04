@@ -1,7 +1,7 @@
 arduEduc
 =========
 
-arduEduc é uma biblioteca para [Arduino](https://www.arduino.cc/) com várias ferramentas úteis. A bibloteca foi escrita completamente em C++ e possui várias otimizações que tornarão os programas mais rápidos e eficientes. A biblioteca pode ser usada em qualquer versão da IDE do Arduino.
+arduEduc é uma biblioteca para [Arduino](https://www.arduino.cc/) com várias ferramentas úteis. A biblioteca foi escrita completamente em C++ e possui várias otimizações que tornarão os programas mais rápidos e eficientes. A biblioteca pode ser usada em qualquer versão da IDE do Arduino.
 
 Instalação
 ===========
