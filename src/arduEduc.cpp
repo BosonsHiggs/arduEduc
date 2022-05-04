@@ -119,7 +119,7 @@ void arduEduc::blocoExecutar(int pinState_[]={0}, int Delay=500)
 }
 
 //função de mapeamento
-long arduEduc::mapear(long x, long in_min, long in_max, long out_min, long out_max) 
+float arduEduc::mapear(long x, long in_min, long in_max, long out_min, long out_max) 
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
