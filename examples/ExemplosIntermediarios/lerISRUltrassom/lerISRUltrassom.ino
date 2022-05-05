@@ -13,8 +13,8 @@ void setup()
 
 void distanciaExibir(int dist)
 {
-     float dist_ = float(dist)/58.0;
-      Serial.println(dist_);
+    float dist_ = float(dist)/58.0;
+    Arduino.imprimir(dist_);
 }
 
 int distanciaUltra()

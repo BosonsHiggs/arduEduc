@@ -34,7 +34,7 @@ void loop()
   myString+="] = ";
   myString+=analogVal[cont];
   
-  Serial.println(myString);
+  Arduino.imprimir(myString);
 
   Arduino.esperar(10);            //Esperar 10ms
 

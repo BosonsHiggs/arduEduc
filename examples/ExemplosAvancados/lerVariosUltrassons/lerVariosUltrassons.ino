@@ -4,10 +4,10 @@
 byte Pinos[] = {2, 3, 4, 5};
 
 //Variável para distância
-long* distancia = 0;
 const int lenPinos = sizeof(Pinos)/sizeof(Pinos[0]); //Quantidade de pinos
 
-long analogVal[lenPinos];
+long* distancia = new long[lenPinos];
+
 String myString;
 int cont = 0;
 
@@ -22,14 +22,19 @@ void setup(){
 void loop()
 {
     distancia =  Arduino.distanciaUltra();
-    analogVal[cont] = *(distancia + cont);
 
     myString = "ultra[";
     myString+=cont;
     myString+="]  = ";
-    myString+=analogVal[cont];
+    myString+=distancia[cont];
 
-    Serial.println(myString);
+    Arduino.imprimir(myString);
 
-    cont = (cont==(lenPinos/2 - 1)) ? 0 : cont+1;
+    if (cont==(lenPinos/2 - 1)) 
+    {
+      cont=0;
+      delete[] distancia;
+    }else {
+      cont+1;
+    }
 }
